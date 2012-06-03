@@ -1,0 +1,65 @@
+@import "../src/components/tabs"
+
+jsk-base-colour = #fff
+jsk-font-colour = #333
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+
+  
+.top
+  clearfix()
+  jsk-tabs-make-group: bottom
+  li
+    jsk-tabs-make-tab: top
+
+.bottom
+  clearfix()
+  jsk-tabs-make-group: top
+  a
+    jsk-tabs-make-tab: bottom
+
+.right
+  float: left
+  jsk-tabs-make-group: right
+  li
+    jsk-tabs-make-tab: left
+
+.left
+  float: right
+  jsk-tabs-make-group: left
+  li
+    jsk-tabs-make-tab: right
+
+.float-left, .float-right
+  div
+    width: 800px
+
+.float-left div
+  float: left
+
+.float-right div
+  float: right
+  
+
+div
+  display: none
+
+  &.active
+    padding: 20px 5px
+    border-bottom: 1px solid darken(jsk-base-colour, 8%)
+  
+
+div.active, .wrapper
+  display: block
+
+.wrapper
+  clearfix()
+  width         : 960px
+  margin        : 0 auto
+  margin-bottom : 100px

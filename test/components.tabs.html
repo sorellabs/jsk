@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Components/Tabs</title>
+    <link rel="stylesheet" media="screen" href="css/components.tabs.css">
+  </head>
+  <body>
+    <div class="wrapper tab-group" id="group1">
+      <ul class="top tab-list">
+        <li data-target="top-1">Foo</li>
+        <li data-target="top-2" class="active">Bar</li>
+        <li data-target="top-3">Baz</li>
+      </ul>
+
+      <div id="top-1">Content for #Foo</div>
+      <div id="top-2" class="active">Content for #Bar</div>
+      <div id="top-3">Content for #Baz</div>
+    </div>
+
+    <div class="wrapper tab-group">
+      <ul class="bottom tab-list">
+        <li><a href="#bottom-1">Foo</a></li>
+        <li><a href="#bottom-2" class="active">Bar</a></li>
+        <li><a href="#bottom-3">Baz</a></li>
+      </ul>
+
+      <div id="bottom-1">Content for #Foo</div>
+      <div id="bottom-2" class="active">Content for #Bar</div>
+      <div id="bottom-3">Content for #Baz</div>
+    </div>
+
+    <div class="wrapper float-left tab-group">
+      <ul class="left tab-list">
+        <li data-target="left-1">Foo</li>
+        <li data-target="left-2" class="active">Bar</li>
+        <li data-target="left-3">Baz</li>
+      </ul>
+
+      <div id="left-1">Content for #Foo</div>
+      <div id="left-2" class="active">Content for #Bar</div>
+      <div id="left-3">Content for #Baz</div>
+    </div>
+
+    <div class="wrapper float-right tab-group">
+      <ul class="right tab-list">
+        <li data-target="right-1">Foo</li>
+        <li data-target="right-2" class="active">Bar</li>
+        <li data-target="right-3">Baz</li>
+      </ul>
+
+      <div id="right-1">Content for #Foo</div>
+      <div id="right-2" class="active">Content for #Bar</div>
+      <div id="right-3">Content for #Baz</div>
+    </div>
+    <script src="../build/js/jsk.js"></script>
+    <script>
+      var tabs  = require('jsk/tabs')()
+      var moros = require('moros')()
+      var root  = require('ekho').Eventful.make()
+      root.on( 'created'
+             , function() {
+                 this.tab.onclick = function(ev) { ev.preventDefault()
+                                                   this.show() }.bind(this) }
+             , tabs.tab_p )
+      tabs.make_groups(root, moros.query('.tab-group'))
+    </script>
+  </body>
+</html>

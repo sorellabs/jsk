@@ -1,0 +1,65 @@
+/// index.styl --- Provides common tabs styles
+//
+// Copyright (c) 2012 Quildreen Motta
+//
+// Permission is hereby granted, free of charge, to any person
+// obtaining a copy of this software and associated documentation files
+// (the "Software"), to deal in the Software without restriction,
+// including without limitation the rights to use, copy, modify, merge,
+// publish, distribute, sublicense, and/or sell copies of the Software,
+// and to permit persons to whom the Software is furnished to do so,
+// subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be
+// included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+/// Module jsk.components.tabs /////////////////////////////////////////
+
+@import "nib"
+
+jsk-tabs-horizontal = top bottom
+jsk-tabs-vertical   = left right
+
+
+jsk-tabs-make-group(position = "bottom")
+  padding           : 0
+  margin            : 0
+  border-{position} : 1px solid darken(jsk-base-colour, 15%)
+
+
+jsk-tabs-make-tab(position = "top")
+  opposite = opposite-position(position)
+
+  position   : relative
+  {position} : 1px
+  padding    : 8px 16px
+  color      : lighten(jsk-font-colour, 50%)
+  cursor     : pointer
+
+  if position in jsk-tabs-horizontal
+    float   : left
+    display : inline
+  else
+    display    : block
+    width      : 100px
+    text-align : opposite
+
+
+  &:hover, &.active
+    color: jsk-font-colour
+ 
+  &.active
+    font-weight             : bold
+    border                  : 1px solid darken(jsk-base-colour, 15%)
+    border-{opposite}-color : jsk-base-colour
+    cursor                  : default
+
