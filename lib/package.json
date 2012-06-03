@@ -1,0 +1,21 @@
+{
+  "author": "Quildreen Motta <quildreen@gmail.com> (http://killdream.github.com)",
+  "name": "jsk",
+  "description": "Behaviours for the JSK Stylus framework",
+  "version": "0.1.0",
+  "homepage": "http://killdream.github.com/jsk",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/killdream/jsk.git"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": "~0.6.7"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
