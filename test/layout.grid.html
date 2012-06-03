@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Layout/Grid.styl --- Grid Layouting</title>
+    <link rel="stylesheet" media="screen" href="css/layout.grid.css">
+  </head>
+  <body>
+    <!-- Fixed layout -->
+    <div id="fixed-layout" class="constrained">
+      <header>
+        <h1>Fixed layout</h1>
+      </header>
+      
+      <article id="content">
+        <p>Content</p>
+      </article>
+      <section id="sidebar">
+        <p>Sidebar</p>
+      </section>
+    </div>
+
+
+    <!-- Fluid layout -->
+    <div id="fluid-layout">
+      <header>
+        <h1>Fluid layout</h1>
+      </header>
+
+      <article id="content">
+        <p>Content</p>
+      </article>
+      <section id="sidebar">
+        <p>Sidebar</p>
+      </section>
+    </div>
+        
+
+      <!-- Maximum-width -->
+    <div id="maximum-width">
+      <header>
+        <h1>Maximum width</h1>
+      </header>
+
+      <div class="constrained">
+        <article id="content">
+          <p>Content</p>
+        </article>
+        <section id="sidebar">
+          <p>Sidebar</p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Nested columns -->
+    <div id="nested">
+      <header>
+        <h1>Nested columns</h1>
+      </header>
+
+      <article id="content">
+        <ul id="boxes">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>
+      </article>
+
+      <section id="sidebar">
+        <p>Sidebar</p>
+      </section>
+    </div>
+
+
+    <!-- Responsive -->
+    <div id="responsive">
+      <header>
+        <h1>Responsive</h1>
+      </header>
+      
+      <article id="content">
+        <p>Content</p>
+      </article>
+
+      <section id="sidebar">
+        <p>Sidebar</p>
+      </section>
+    </div>
+    </div>
+  </body>
+</html>
