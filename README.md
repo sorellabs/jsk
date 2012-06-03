@@ -1,8 +1,12 @@
-// -*- fill-column: 72 -*-
+<!-- -*- fill-column: 72 -*- -->
 
-jsk
+JSK
 ===
 
-jsk (jumper-skirt) is an extension to the [Stylus][] language, which brings in
-several abstractions for writing more concise and declarative CSS. We pigback
+JSK (Jumper Skirt) is an extension to the [Stylus][] language, which brings in
+several abstractions for writing more concise and declarative CSS. We piggyback
 on [Nib][] as well, to bring all the CSS3 awesomeness.
+
+
+[Stylus]: http://learnboost.github.com/stylus/
+[Nib]: http://visionmedia.github.com/nib/
