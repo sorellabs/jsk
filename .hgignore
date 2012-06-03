@@ -8,6 +8,7 @@ temporary
 logs
 media/styles
 media/scripts
+test/css
 
 
 # -- Compass -----------------------------------------------------------
