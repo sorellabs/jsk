@@ -56,14 +56,7 @@
     <script src="../build/js/jsk.js"></script>
     <script>
       var tabs  = require('jsk/tabs')()
-      var moros = require('moros')()
-      var root  = require('ekho').Eventful.make()
-      root.on( 'created'
-             , function() {
-                 this.tab.onclick = function(ev) { ev.preventDefault()
-                                                   this.show() }.bind(this) }
-             , tabs.tab_p )
-      tabs.make_groups(root, moros.query('.tab-group'))
+      tabs.tabify('.tab-group:not(.jskp-tabgroup)')
     </script>
   </body>
 </html>
