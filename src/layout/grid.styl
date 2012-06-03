@@ -114,7 +114,7 @@ jsk-grid--gutter-margin(columns = jsk-grid-columns)
 ///// Function jsk-grid--dimensions
 // :internal:
 // jsk-grid--dimensions :: Unit, Unit -> IO Node
-jsk-grid--dimensions(gutter, margin):
+jsk-grid--dimensions(gutter, margin)
   fix-rounding = jsk-grid--fix-pixel-rounding
 
   width:   jsk-grid-width * gutter
