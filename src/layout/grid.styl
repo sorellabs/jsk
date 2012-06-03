@@ -26,7 +26,7 @@
 // Semantic Grid is (c) Tyler Tate (http://twitter.com/tylertate), and
 // is lisensed under an Apache licence.
 
-/// Module grid
+/// Module grid ////////////////////////////////////////////////////////
 //
 // A port of the `Semantic Grid`_ system over to `Stylus`_, using the
 // JumperSkirt namespacing conventions to make it more modular.
@@ -108,7 +108,7 @@ jsk-grid--gutter-margin(columns = jsk-grid-columns)
   gutter = jsk-grid-gutter
   size   = jsk-grid--size(columns)
   
-  ((gutter * 0.5) / size
+  (gutter * 0.5) / size
 
 
 ///// Function jsk-grid--dimensions
@@ -116,7 +116,7 @@ jsk-grid--gutter-margin(columns = jsk-grid-columns)
 // jsk-grid--dimensions :: Unit, Unit -> IO Node
 jsk-grid--dimensions(gutter, margin):
   fix-rounding = jsk-grid--fix-pixel-rounding
-  
+
   width:   jsk-grid-width * gutter
   margin:  0 (jsk-grid-width * margin)
   *width:  fix-rounding(@width)
